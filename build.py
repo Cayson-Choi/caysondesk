@@ -14,7 +14,7 @@ from pathlib import Path
 windows = platform.platform().startswith('Windows')
 osx = platform.platform().startswith(
     'Darwin') or platform.platform().startswith("macOS")
-hbb_name = 'rustdesk' + ('.exe' if windows else '')
+hbb_name = 'caysondesk' + ('.exe' if windows else '')
 exe_path = 'target/release/' + hbb_name
 if windows:
     flutter_build_dir = 'build/windows/x64/runner/Release/'
@@ -434,7 +434,7 @@ def build_flutter_arch_manjaro(version, features):
 def build_flutter_windows(version, features, skip_portable_pack):
     if not skip_cargo:
         system2(f'cargo build --features {features} --lib --release')
-        if not os.path.exists("target/release/librustdesk.dll"):
+        if not os.path.exists("target/release/libcaysondesk.dll"):
             print("cargo build failed, please check rust source code.")
             exit(-1)
     os.chdir('flutter')

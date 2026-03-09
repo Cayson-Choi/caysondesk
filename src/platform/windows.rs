@@ -1879,8 +1879,8 @@ fn get_public_base_dir() -> PathBuf {
 #[inline]
 pub fn get_custom_client_staging_dir() -> PathBuf {
     get_public_base_dir()
-        .join("RustDesk")
-        .join("RustDeskCustomClientStaging")
+        .join("CaysonDesk")
+        .join("CaysonDeskCustomClientStaging")
 }
 
 /// Removes the custom client staging directory.
